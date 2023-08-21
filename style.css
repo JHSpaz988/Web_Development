@@ -1,0 +1,215 @@
+/* Main page styles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+.myself {
+    background-color: #000000;
+    color: whitesmoke;
+    padding: 20px;
+    height: 100vh;
+}
+
+.myself .introduction {
+    text-align: center;
+    font-size: 6rem;
+    padding: 3rem;
+    border-bottom: 2px solid ;
+    width: 50%;
+    margin: auto;
+}
+
+.myself h2 {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-size: 3.5rem;
+    padding: 3rem;
+}
+
+.myself p {
+    text-align: center;
+    font-size: 1.6rem;
+    width: 70%;
+    margin: auto;
+    padding: 3rem;
+}
+
+span {
+    text-decoration-line: underline;
+    text-align: center;
+}
+
+.inspiration {
+    width: 100%;
+    margin: auto;
+}
+
+.inspiration ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #EEEEEE;
+    list-style-type: none;
+    margin: auto;
+    border: 8px solid #4E4FEB;
+    border-radius: 1000px 100px 100px 100px;
+}
+
+.border {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #EEEEEE;
+    border: 6px solid white;
+    box-shadow: 8px 8px 20px 3px #4E4FEB;
+    border-radius: 80px 40px 20px 10px;
+    padding: 10px;
+}
+
+.inspiration div h3 {
+    padding: 10px;
+}
+
+#continuous-learning-border {
+    grid-column: span 2;
+    width: 60%;
+}
+
+.inspiration-items {
+    padding: 5px;
+}
+
+.resume-link h3 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 1400px) {
+    .myself {
+        height: 100%;
+    }
+    .border {
+        width: 60%;
+    }
+}
+@media (max-width: 1200px) {
+    .inspiration ul {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .inspiration {
+        
+}
+
+    .border {
+        grid-column: 1;
+        width: 50%;
+    }
+
+    #continuous-learning-border {
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .myself h1 {
+        font-size: 3.5rem;
+    }
+
+    .myself h2 {
+        font-size: 1.8rem;
+    }
+
+    .border {
+        padding: 0;
+        width: 70%;
+        margin: auto;
+    }
+
+    #continuous-learning-border {
+        width: 70%;
+    }
+    
+
+}
+
+/* Resume page styles */
+
+.resume {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+.resume .about-me {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    color: #EEEEEE;
+    padding: 20px;
+    width: auto;
+    z-index: 2;
+}
+
+.resume .about-me ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-content {
+    border-left: 8px solid #4E4FEB;
+    overflow-y: auto;
+    background-color: #EEEEEE;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
+.resume-content #Summary {
+    column: span 2;
+}
+
+.content-item {
+    padding: 5px;
+    width: 90%;
+    align-self: center;
+}
+.content-item h2 {
+    color: #068FFF;
+}
+
+.resume .about-me img {
+    width: 13px;
+    height: 13px;
+    border-radius: 4px;
+}
+
+.resume .about-me ul  {
+    padding: 5px;
+    margin: auto;
+}
+
+.resume .about-me ul li {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+000000
+4E4FEB
+068FFF
+EEEEEE
