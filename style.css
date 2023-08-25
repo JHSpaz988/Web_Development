@@ -9,6 +9,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    height: 100%;
 }
 
 .myself {
@@ -91,17 +92,16 @@ span {
     padding: 0;
     margin: 0;
 }
-@media (max-width: 1400px) {
-    .myself {
-        height: 100%;
-    }
 
+@media (max-width: 1280px) {
+    .myself {
+            height: 100%;
+        }
+    
     .border {
         width: 60%;
     }
-}
 
-@media (max-width: 1200px) {
     .inspiration ul {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -142,11 +142,13 @@ span {
 }
 
 /* Resume page styles */
+html {
+    overflow: visible !important;
+}
 
 .resume {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 20px;
     height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -155,14 +157,19 @@ span {
 .resume .about-me {
     position: sticky;
     top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    width: auto;
     color: #EEEEEE;
-    padding: 20px;
-    width: auto;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 0;
+    margin: 0;
     height: 100vh;
-    overflow-x: hidden;
+}
+
+.identifier {
+    font-size: 2rem;
 }
 
 .resume .about-me ul {
@@ -173,13 +180,20 @@ span {
 
 .resume-content {
     border-left: 8px solid #4E4FEB;
-    overflow-y: auto;
     background-color: #EEEEEE;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 10px;
-    height: 100vh;
 }
+
+#Vitro ul li{
+    list-style: circle ;
+}
+
+#Vitro .position {
+    list-style: none;
+}
+
 
 #Summary {
     grid-column: span 2;
@@ -193,6 +207,12 @@ span {
     padding: 5px;
     width: 90%;
 }
+
+#WorkExperience {
+    grid-row: 4;
+    grid-column: span 2;
+}
+
 .content-item h2 {
     color: #068FFF;
 }
@@ -213,43 +233,49 @@ span {
     margin: 5px;
 }
 
-footer {
-    color: #EEEEEE;
-    text-align: left;
-    clear: both;
-    align-self: flex-end;
-
-}
-
-@media (max-width: 1600px) {
-
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
     .resume {
         grid-template-columns: 1fr;
     }
 
     .resume .about-me {
         position: relative;
-        height: 100vh;
-        overflow-y: scroll;
+    }
+
+    .resume-content {
+        grid-template-columns: 1fr;
+        border-left: none;
+        border-top: 6px solid #4E4FEB;
     }
 
     #Summary {
+        grid-column: 1;
         display: none;
     }
 
     #Summary-Mobile {
         display: inline;
+        font-size: 1rem;
     }
 
     .resume .about-me ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
 
     }
 
-    .resume-content {
-        grid-template-columns: 1fr;
+    .resume .about-me .contact-me .text {
+        display: none;
+    }
+
+    .resume .about-me img {
+        height: 30px;
+        width: 30px;
+    }
+
+    #WorkExperience {
+        grid-column: 1;
     }
 }
 
