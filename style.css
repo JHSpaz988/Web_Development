@@ -19,8 +19,9 @@ body {
     justify-content: center;
     align-items: center;
     color: whitesmoke;
-    height: 100vh;
+    height: 100%;
     text-align: center;
+
 }
 
 .myself h1 {
