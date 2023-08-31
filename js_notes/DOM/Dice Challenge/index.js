@@ -30,7 +30,7 @@ function determineWinner(randomNumber1, randomNumber2) {
 var randomNumber1 = changeImage(1);
 var randomNumber2 = changeImage(2);
 
-var winner = determineWinner();
+var winner = determineWinner(randomNumber1, randomNumber2);
 
 document.querySelector("h1").innerText = winner;
  
