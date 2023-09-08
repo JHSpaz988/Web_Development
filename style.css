@@ -1,286 +1,273 @@
 /* Main page styles */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #000000;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .myself {
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
-    height: 100%;
-    text-align: center;
-
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  height: 100%;
+  text-align: center;
 }
 
 .myself h1 {
-    font-size: 6rem;
-    padding: 3rem;
-    border-bottom: 2px solid ;
-    width: 50%;
+  font-size: 6rem;
+  padding: 3rem;
+  border-bottom: 2px solid;
+  width: 50%;
 }
 
 .myself h2 {
-    width: 50%;
-    margin: auto;
-    font-size: 3.5rem;
-    padding: 3rem;
+  width: 50%;
+  margin: auto;
+  font-size: 3.5rem;
+  padding: 3rem;
 }
 
 .myself p {
-    font-size: 1.6rem;
-    width: 70%;
-    margin: auto;
-    padding: 3rem;
+  font-size: 1.6rem;
+  width: 70%;
+  margin: auto;
+  padding: 3rem;
 }
 
 span {
-    text-decoration-line: underline;
-    text-align: center;
+  text-decoration-line: underline;
+  text-align: center;
 }
 
 .inspiration {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 .inspiration ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: #EEEEEE;
-    list-style-type: none;
-    margin: auto;
-    border: 8px solid #4E4FEB;
-    border-radius: 1000px 100px 100px 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #eeeeee;
+  list-style-type: none;
+  margin: auto;
+  border: 8px solid #4e4feb;
+  border-radius: 1000px 100px 100px 100px;
 }
 
 .border {
-    width: 40%;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: #EEEEEE;
-    border: 6px solid white;
-    box-shadow: 8px 8px 20px 3px #4E4FEB;
-    border-radius: 80px 40px 20px 10px;
-    padding: 20px;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #eeeeee;
+  border: 6px solid white;
+  box-shadow: 8px 8px 20px 3px #4e4feb;
+  border-radius: 80px 40px 20px 10px;
+  padding: 20px;
 }
 
-
-
 #continuous-learning-border {
-    grid-column: span 2;
-    width: 60%;
+  grid-column: span 2;
+  width: 60%;
 }
 
 .inspiration-items {
-    padding: 5px;
+  padding: 5px;
 }
 
 .resume-link h3 {
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 1280px) {
-    .myself {
-            height: 100%;
-        }
-    
-    .border {
-        width: 60%;
-    }
+  .myself {
+    height: 100%;
+  }
 
-    .inspiration ul {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-    }
+  .border {
+    width: 60%;
+  }
 
-    .inspiration {
-        
-    }
+  .inspiration ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
 
-    .border {
-        grid-column: 1;
-        width: 50%;
-    }
+  .inspiration {
+  }
 
-    #continuous-learning-border {
-        width: 50%;
-    }
+  .border {
+    grid-column: 1;
+    width: 50%;
+  }
+
+  #continuous-learning-border {
+    width: 50%;
+  }
 }
 
 @media (max-width: 800px) {
-    .myself h1 {
-        font-size: 3.5rem;
-    }
+  .myself h1 {
+    font-size: 3.5rem;
+  }
 
-    .myself h2 {
-        font-size: 1.8rem;
-    }
+  .myself h2 {
+    font-size: 1.8rem;
+  }
 
-    .border {
-        width: 70%;
-    }
+  .border {
+    width: 70%;
+  }
 
-    #continuous-learning-border {
-        width: 70%;
-    }
-    
-
+  #continuous-learning-border {
+    width: 70%;
+  }
 }
 
 /* Resume page styles */
 html {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 .resume {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    height: 100vh;
-    position: relative;
-    overflow-x: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .resume .about-me {
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    color: #EEEEEE;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 0;
-    margin: 0;
-    height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  color: #eeeeee;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 0;
+  margin: 0;
+  height: 100vh;
 }
 
 .identifier {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .resume .about-me ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .resume-content {
-    border-left: 8px solid #4E4FEB;
-    background-color: #EEEEEE;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px;
+  border-left: 8px solid #4e4feb;
+  background-color: #eeeeee;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
 }
 
-#Vitro ul li{
-    list-style: circle ;
+#Vitro ul li {
+  list-style: circle;
 }
 
 #Vitro .position {
-    list-style: none;
+  list-style: none;
 }
 
-
 #Summary {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 #Summary-Mobile {
-    display: none;
+  display: none;
 }
 
 .content-item {
-    padding: 5px;
-    width: 90%;
+  padding: 5px;
+  width: 90%;
 }
 
 #WorkExperience {
-    grid-row: 4;
-    grid-column: span 2;
+  grid-row: 4;
+  grid-column: span 2;
 }
 
 .content-item h2 {
-    color: #068FFF;
+  color: #068fff;
 }
 
 .resume .about-me img {
-    width: 13px;
-    height: 13px;
-    border-radius: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
 }
 
-.resume .about-me ul  {
-    padding: 5px;
-    margin: auto;
+.resume .about-me ul {
+  padding: 5px;
+  margin: auto;
 }
 
 .resume .about-me ul li {
-    padding: 5px;
-    margin: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 @media (max-width: 1280px) {
-    .resume {
-        grid-template-columns: 1fr;
-    }
+  .resume {
+    grid-template-columns: 1fr;
+  }
 
-    .resume .about-me {
-        position: relative;
-    }
+  .resume .about-me {
+    position: relative;
+  }
 
-    .resume-content {
-        grid-template-columns: 1fr;
-        border-left: none;
-        border-top: 6px solid #4E4FEB;
-    }
+  .resume-content {
+    grid-template-columns: 1fr;
+    border-left: none;
+    border-top: 6px solid #4e4feb;
+  }
 
-    #Summary {
-        grid-column: 1;
-        display: none;
-    }
+  #Summary {
+    grid-column: 1;
+    display: none;
+  }
 
-    #Summary-Mobile {
-        display: inline;
-        font-size: 1rem;
-    }
+  #Summary-Mobile {
+    display: inline;
+    font-size: 1rem;
+  }
 
-    .resume .about-me ul {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+  .resume .about-me ul {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    }
+  .resume .about-me .contact-me .text {
+    display: none;
+  }
 
-    .resume .about-me .contact-me .text {
-        display: none;
-    }
+  .resume .about-me img {
+    height: 30px;
+    width: 30px;
+  }
 
-    .resume .about-me img {
-        height: 30px;
-        width: 30px;
-    }
-
-    #WorkExperience {
-        grid-column: 1;
-    }
+  #WorkExperience {
+    grid-column: 1;
+  }
 }
-
-000000
-4E4FEB
-068FFF
-EEEEEE

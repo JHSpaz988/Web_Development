@@ -1,6 +1,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
 import qr from "qr-image";
+
 inquirer
   .prompt([
     {
