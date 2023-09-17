@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<div class="flex-heading" id="list-heading">
+    <h1><%= listHeader %></h1>
+</div>
+<div class="flex-box" id="todo-list">
+    <% if (locals.toDoList) { %>
+        <% toDoList.forEach(item => { %>
+            <%-include("partials/todoItem.ejs", { item: item }) %>
+        <% }); %>
+    <% } %>
+    <%- include("partials/form.ejs") %>
+</div>
+
+<%- include("partials/footer.ejs") %>

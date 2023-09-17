@@ -1,0 +1,18 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "ToDo List web application with optimizations for mobile",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaron Haberstroh",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jquery": "^3.7.1",
+    "node": "^20.6.0"
+  }
+}
