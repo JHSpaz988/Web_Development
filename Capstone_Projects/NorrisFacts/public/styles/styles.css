@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #C51605;
+  text-wrap: wrap;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section {
+  display: grid;
+  grid-template: auto / 400px 200px;
+  border: 3px solid #FD8D14;
+  text-align: center;
+  font-size: 1em;
+  box-shadow: 7px 5px 20px -5px black;
+}
+
+#mma-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#joke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #FFE17B;
+  overflow: hidden;
+}
+
+img {
+}

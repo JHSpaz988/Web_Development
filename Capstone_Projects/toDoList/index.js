@@ -1,5 +1,4 @@
 import express, { urlencoded } from "express";
-import jQuery from "jquery";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -14,7 +13,6 @@ let listHeader = "";
 
 app.use(urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use("/jquery", express.static(__dirname + "/node_modules/jquery/dist/"));
 
 app.get("/", (req, res) => {
   referer = req.url;

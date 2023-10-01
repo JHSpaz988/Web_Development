@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+    <main>
+        <section>
+            <%- include("partials/image.ejs"), { imageURL: imageURL, imageDescription: imageDescription } %>
+            <%- include("partials/joke.ejs"), { joke: joke } %>
+        </section>
+    </main>
+    
+<%- include("partials/footer.ejs") %>
