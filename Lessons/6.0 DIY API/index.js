@@ -8,20 +8,91 @@ const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
+app.get("/random", (req, res) => {
+  const ranIdx = Math.floor(Math.random() * jokes.length);
+  res.json(jokes[ranIdx]);
+});
 
 //2. GET a specific joke
+app.get("/jokes/:id", (req, res) => {
+  const jokeID = parseInt(req.params.id);
+  const foundJoke = jokes.find((joke) => joke.id === jokeID);
+  res.json(foundJoke);
+});
 
 //3. GET a jokes by filtering on the joke type
+app.get("/filter", (req, res) => {
+  const type = req.query.type;
+  const foundJokes = jokes.filter((joke) => joke.jokeType === type);
+  res.json(foundJokes);
+});
 
 //4. POST a new joke
-
+app.post("/jokes", (req, res) => {
+  const jokeObj = {
+    id: jokes.length + 1,
+    jokeType: req.body.type,
+    jokeText: req.body.text,
+  };
+  jokes.push(jokeObj);
+});
 //5. PUT a joke
-
+app.put("/jokes/:id", (req, res) => {
+  const jokeID = parseInt(req.params.id);
+  const jokeObj = {
+    id: jokeID,
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  };
+  const searchIdx = jokes.findIndex((joke) => joke.id === id);
+  if (jokeObj.id & jokeObj.jokeText & jokeObj.jokeType) {
+    jokes[searchIdx] = jokeObj;
+  }
+});
 //6. PATCH a joke
-
+app.patch("/jokes/:id", (req, res) => {
+  const jokeID = parseInt(req.params.id);
+  const existingJoke = jokes.find((joke) => joke.id === jokeID);
+  const replacementJoke = {
+    id: jokeID,
+    jokeText: req.body.text || existingJoke.jokeText,
+    jokeType: req.body.type || existingJoke.jokeType,
+  };
+  const searchIdx = jokes.findIndex((joke) => joke.id === jokeID);
+  jokes[searchIdx] = replacementJoke;
+  // if (req.body.text) {
+  //   jokes[searchIdx].text = req.body.text;
+  // }
+  // if (req.body.type) {
+  //   jokes[searchIdx].type = req.body.type;
+  // }
+});
 //7. DELETE Specific joke
-
+app.delete("/joeks/:id", (req, res) => {
+  const jokeID = parseInt(req.params.id);
+  const searchIdx = jokes.findIndex((joke) => joke.id === jokeID);
+  if (searchIdx > -1) {
+    jokes.splice(searchIdx, 1);
+    res.sendStatus(200);
+  } else {
+    res.status(404).json({
+      error: `Joke with id: ${jokeID} not found. No jokes were deleted.`,
+    });
+  }
+  // const newJokeList = jokes.filter((joke) => joke.id != jokeID);
+  // jokes = newJokeList;
+});
 //8. DELETE All jokes
+app.delete("/all", (req, res) => {
+  if (req.query.key === masterKey) {
+    jokes = [];
+    res.sendStatus(200);
+  } else {
+    res
+      .status(404)
+      .json({ error: `You are not authorized to perform this action.` });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
