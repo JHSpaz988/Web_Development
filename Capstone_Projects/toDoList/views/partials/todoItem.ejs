@@ -1,4 +1,7 @@
-<div class="todo-item">
-    <input class="completion-box" type="checkbox">
-    <p class="completion-task"><%= item %></p>
-</div>
+<form action="/delete" method="post">
+    <div class="todo-item">
+        <input type="hidden" name="itemId" value="<%= item._id %>">
+        <input class="completion-box" type="checkbox" name="checkbox" onchange="this.form.submit()">
+        <p class="completion-task"><%= item.name %></p>
+    </div>
+</form>

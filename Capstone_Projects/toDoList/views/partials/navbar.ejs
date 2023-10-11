@@ -3,11 +3,12 @@
         <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/work">Work</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/recent">Today</a>
-        </li>
+        <% if (locals.navBarList) { %>
+            <% navBarList.forEach(item => { %>
+                <li class="nav-item">
+                    <a class="nav-link" href=<%= `/${item}` %>><%= item %></a>
+                </li>
+            <% }); %>
+        <% } %>
     </ul>
 </nav>

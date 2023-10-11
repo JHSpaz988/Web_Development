@@ -73,6 +73,7 @@ main {
 
 .todo-item .completion-task {
   padding: 10px;
+  text-align: left;
 }
 
 .input-item {
@@ -100,7 +101,6 @@ input.input-input:focus {
   border-radius: 50%;
   background-color: #FBF0B2;
   font-size: 2em;
-  text-align: center;
 }
 
 footer {
